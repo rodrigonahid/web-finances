@@ -1,0 +1,100 @@
+header{
+    height: 240px;
+    background-color: $background;
+    display: flex;
+    justify-content: center;
+    h1{
+        margin-top: 30px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        color: #FFF;
+        span{
+            color: $positive;
+            font-weight: 800;
+        }
+    }
+}
+main{
+    background-color: #F0F1F5;
+    min-height: calc(100vh - 240px);
+    .balance{
+        display: flex;
+        justify-content: space-between;
+        &-card{
+            padding: 25px 30px;
+            background-color: #FFF;
+            margin: 15px;
+            width: calc(33.3% - 30px);
+            border-radius: 4px;
+            box-shadow: 0 0px 6px 6px rgba(16,27,30,0.1);
+            margin-top: -70px;
+            &:last-child{
+                background-color: $positive;
+                h3,
+                .valor{
+                    color: #FFF;
+                }
+            }
+            &-top{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 12px;
+                h3{
+                    font-style: normal;
+                    font-weight: normal;
+                    line-height: 24px;
+                    font-size: 16px;
+                    color: $txt-400;
+                }
+            }
+            .valor{
+                font-style: normal;
+                font-weight: normal;
+                font-size: 36px;
+                line-height: 54px;
+                color: $txt-500;
+                span{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+.data-table{
+    width: 100%;
+    thead tr th,
+    tbody tr td{
+        text-align: left;
+        padding: 20px 32px;
+    }
+    thead tr th{
+        color: $positive;
+        &.date{
+            text-align: end;
+        }
+    }
+    tbody tr td{
+        &.description{
+            color: $txt-500;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 600;
+        }
+        &.date{
+            text-align: end;
+            color: $txt-400;
+        }
+    }
+    tbody tr{
+        border-radius: 4px;
+        transition: .2s;
+        &:nth-child(2n+1){
+            background-color: #FFF;
+        }
+        &:hover{
+            background-color: #E5E7EB;
+        }
+    }
+}
