@@ -63,7 +63,30 @@ table {
 @media screen and (max-width: 768px) {
   .container {
     padding: 0 20px;
+    max-width: 100%;
   }
+}
+
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+.modal-overlay.active {
+  visibility: visible;
+}
+
+.modal {
+  background-color: #F0F2F5;
+  padding: 20px 30px;
 }
 
 header {
@@ -87,10 +110,16 @@ header h1 span {
 main {
   background-color: #F0F1F5;
   min-height: calc(100vh - 240px);
+  padding-bottom: 60px;
 }
 main .balance {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 900px) {
+  main .balance {
+    flex-direction: column;
+  }
 }
 main .balance-card {
   padding: 25px 30px;
@@ -100,6 +129,14 @@ main .balance-card {
   border-radius: 4px;
   box-shadow: 0 0px 6px 6px rgba(16, 27, 30, 0.1);
   margin-top: -70px;
+}
+@media screen and (max-width: 900px) {
+  main .balance-card {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
 }
 main .balance-card:last-child {
   background-color: #49aa26;
@@ -114,6 +151,11 @@ main .balance-card-top {
   align-items: center;
   margin-bottom: 12px;
 }
+@media screen and (max-width: 900px) {
+  main .balance-card-top {
+    padding: 20px 30px;
+  }
+}
 main .balance-card-top h3 {
   font-style: normal;
   font-weight: normal;
@@ -127,6 +169,11 @@ main .balance-card .valor {
   font-size: 36px;
   line-height: 54px;
   color: #363F5F;
+}
+@media screen and (max-width: 900px) {
+  main .balance-card .valor {
+    padding: 20px 30px;
+  }
 }
 main .balance-card .valor span {
   font-weight: 600;
@@ -165,6 +212,13 @@ main .balance-card .valor span {
 }
 .data-table tbody tr:hover {
   background-color: #E5E7EB;
+}
+
+.modal form {
+  max-width: 500px;
+}
+.modal form h2 {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

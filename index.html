@@ -54,9 +54,9 @@
               <table class="data-table">
                 <thead>
                   <tr>
-                    <th class="description">Descrição</th>
-                    <th class="expense">Valor</th>
-                    <th class="date">Data</th>
+                    <th data-label class="description">Descrição</th>
+                    <th data-label class="expense">Valor</th>
+                    <th data-label class="date">Data</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -80,5 +80,35 @@
             </section>
         </div>
     </main>
+    <section class="modal-overlay active">
+        <div class="modal">
+            <h2>Nova transação</h2>
+            <form action="#">
+                <div class="input-group">
+                    <label for="description">
+                        Descrição
+                        <input type="text" id="description" name="description" placeholder="Valor"> 
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="amount">
+                        Descrição
+                        <input type="number" id="amount" name="amount" placeholder="">
+                    </label>
+                    <small>Use o sinal - (negativo) para despesas e , (vírgula) para casas decimais</small>
+                </div>
+                <div class="input-group">
+                    <label for="date">
+                        Data
+                        <input type="text" id="date" name="date" placeholder="01/01/2021"> 
+                    </label>
+                </div>
+                <div class="input-group actions">
+                    <a href="#">Cancelar</a>
+                    <button>Salvar</button>
+                </div>
+            </form>
+        </div>
+    </section>
   </body>
 </html>
