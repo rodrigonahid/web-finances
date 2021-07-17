@@ -51,6 +51,7 @@
             </section>
       
             <section class="transaction">
+                <a href="#" onclick="Modal.open()">+ Nova Transação</a>
               <table class="data-table">
                 <thead>
                   <tr>
@@ -60,55 +61,39 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td class="description">Luz</td>
-                    <td class="expense">-R$ 500,00</td>
-                    <td class="date">23/01/2021</td>
-                  </tr>
-                  <tr>
-                    <td class="description">Criação Website</td>
-                    <td class="expense">R$ 5.000,00</td>
-                    <td class="date">23/01/2021</td>
-                  </tr>
-                  <tr>
-                    <td class="description">Internet</td>
-                    <td class="expense">-R$ 500,00</td>
-                    <td class="date">23/01/2021</td>
-                  </tr>
+                 
                 </tbody>
               </table>
             </section>
         </div>
     </main>
-    <section class="modal-overlay active">
+    <section class="modal-overlay">
         <div class="modal">
             <h2>Nova transação</h2>
             <form action="#">
-                <div class="input-group">
-                    <label for="description">
-                        Descrição
-                        <input type="text" id="description" name="description" placeholder="Valor"> 
-                    </label>
-                </div>
-                <div class="input-group">
-                    <label for="amount">
-                        Descrição
-                        <input type="number" id="amount" name="amount" placeholder="">
-                    </label>
+                <label for="description">
+                    <span>Valor</span>
+                    <input type="text" id="description" name="description" placeholder="Valor"> 
+                </label>
+            
+                <label for="amount">
+                    <span>Descrição</span>
+                    <input type="number" id="amount" name="amount" placeholder="">
                     <small>Use o sinal - (negativo) para despesas e , (vírgula) para casas decimais</small>
-                </div>
-                <div class="input-group">
-                    <label for="date">
-                        Data
-                        <input type="text" id="date" name="date" placeholder="01/01/2021"> 
-                    </label>
-                </div>
-                <div class="input-group actions">
-                    <a href="#">Cancelar</a>
+                </label>
+                
+                <label for="date">
+                    <span>Data</span>
+                    <input type="text" id="date" name="date" placeholder="01/01/2021"> 
+                </label>
+                <div class="actions">
+                    <a href="#" onclick="Modal.close()">Cancelar</a>
                     <button>Salvar</button>
                 </div>
             </form>
         </div>
     </section>
+    <script src="assets/scripts/modal.js"></script>
+    <script src="assets/scripts/script.js"></script>
   </body>
 </html>

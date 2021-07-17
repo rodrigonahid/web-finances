@@ -18,5 +18,61 @@
 .modal{
     background-color: #F0F2F5;
     padding: 20px 30px;
-    
+    h2{
+        margin-bottom: 24px;
+        color: $txt-500;
+        font-weight: 600;
+    }
+    label{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+        span{
+            font-size: 12px;
+            color: $txt-400;
+            margin-bottom: 4px;
+        }
+        small{
+            font-size: 12px;
+            margin-top: 2px;
+        }
+        input{
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid #000;
+        }
+    }
+    .actions{
+        display: flex;
+        margin: 0 -10px;
+        a,
+        button{
+            display: block;
+            padding: 16px;
+            width: 50%;
+            text-align: center;
+            margin: 0 10px;
+            border-radius: 4px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            transition: .2s;
+        }
+        a{
+            border: 2px solid $negative;
+            color: $negative;
+            text-decoration: none;
+            &:hover{
+                background-color: rgba($negative, 10%);
+            }
+        }
+        button{
+            border: none;
+            background-color: $positive;
+            color: #FFF;
+            cursor: pointer;
+            
+        }
+    }
 }

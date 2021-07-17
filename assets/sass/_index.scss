@@ -104,6 +104,12 @@ main{
             text-align: end;
             color: $txt-400;
         }
+        &.income{
+            color: $positive;
+        }
+        &.expense{
+            color: $negative;
+        }
     }
     tbody tr{
         border-radius: 4px;
