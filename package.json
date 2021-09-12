@@ -1,0 +1,20 @@
+{
+  "name": "web-finances",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sass --watch assets/sass/style.scss:assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nahid144z/web-finances.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nahid144z/web-finances/issues"
+  },
+  "homepage": "https://github.com/nahid144z/web-finances#readme"
+}

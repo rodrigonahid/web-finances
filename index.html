@@ -25,7 +25,7 @@
                         <path d="M16 21.3333L16 10.6667" stroke="#49AA26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <p class="valor">R$ <span>5.000</span>,00</p>
+                <p class="valor" id="incomeDisplay">R$ <span></span>,00</p>
               </div>
               <div class="balance-card">
                 <div class="balance-card-top">
@@ -36,7 +36,7 @@
                         <path d="M16 10.6667L16 21.3333" stroke="#E92929" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>    
                 </div>
-                <p class="valor">R$ <span>2.000</span>,00</p>
+                <p class="valor" id="expenseDisplay">R$ <span></span>,00</p>
               </div>
               <div class="balance-card">
                 <div class="balance-card-top">
@@ -46,12 +46,12 @@
                         <path d="M22.6667 6.66667H12.6667C11.429 6.66667 10.242 7.15834 9.36684 8.03351C8.49167 8.90868 8 10.0957 8 11.3333C8 12.571 8.49167 13.758 9.36684 14.6332C10.242 15.5083 11.429 16 12.6667 16H19.3333C20.571 16 21.758 16.4917 22.6332 17.3668C23.5083 18.242 24 19.429 24 20.6667C24 21.9043 23.5083 23.0913 22.6332 23.9665C21.758 24.8417 20.571 25.3333 19.3333 25.3333H8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>    
                 </div>
-                <p class="valor">R$ <span>3.000</span>,00</p>
+                <p class="valor" id="totalDisplay">R$ <span></span>,00</p>
               </div>
             </section>
       
             <section class="transaction">
-                <a href="#" onclick="Modal.open()">+ Nova Transação</a>
+                <a href="#" onclick="Modal.open()" class="nova-transacao">+ Nova Transação</a>
               <table class="data-table">
                 <thead>
                   <tr>
@@ -70,21 +70,21 @@
     <section class="modal-overlay">
         <div class="modal">
             <h2>Nova transação</h2>
-            <form action="#">
+            <form action="#" onsubmit="Form.submit(event)">
                 <label for="description">
-                    <span>Valor</span>
-                    <input type="text" id="description" name="description" placeholder="Valor"> 
+                    <span>Descrição</span>
+                    <input type="text" id="description" name="description" placeholder="Descrição"> 
                 </label>
             
                 <label for="amount">
-                    <span>Descrição</span>
-                    <input type="number" id="amount" name="amount" placeholder="">
+                    <span>Valor</span>
+                    <input type="text" id="amount" name="amount" placeholder="0,00">
                     <small>Use o sinal - (negativo) para despesas e , (vírgula) para casas decimais</small>
                 </label>
                 
                 <label for="date">
                     <span>Data</span>
-                    <input type="text" id="date" name="date" placeholder="01/01/2021"> 
+                    <input type="date" id="date" name="date" placeholder="01/01/2021"> 
                 </label>
                 <div class="actions">
                     <a href="#" onclick="Modal.close()">Cancelar</a>

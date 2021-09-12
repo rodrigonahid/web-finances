@@ -140,16 +140,17 @@ table {
 }
 .modal .actions button {
   border: none;
-  background-color: #49aa26;
+  background-color: #47126b;
   color: #FFF;
   cursor: pointer;
 }
 
 header {
   height: 240px;
-  background-color: #39895E;
+  background-color: #8e7dbe;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 header h1 {
   margin-top: 30px;
@@ -159,7 +160,7 @@ header h1 {
   color: #FFF;
 }
 header h1 span {
-  color: #49aa26;
+  color: #47126b;
   font-weight: 800;
 }
 
@@ -171,10 +172,12 @@ main {
 main .balance {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 @media screen and (max-width: 900px) {
   main .balance {
     flex-direction: column;
+    margin-top: -120px;
   }
 }
 main .balance-card {
@@ -195,7 +198,7 @@ main .balance-card {
   }
 }
 main .balance-card:last-child {
-  background-color: #49aa26;
+  background-color: #47126b;
 }
 main .balance-card:last-child h3,
 main .balance-card:last-child .valor {
@@ -244,7 +247,7 @@ main .balance-card .valor span {
   padding: 20px 32px;
 }
 .data-table thead tr th {
-  color: #49aa26;
+  color: #47126b;
 }
 .data-table thead tr th.date {
   text-align: end;
@@ -260,7 +263,7 @@ main .balance-card .valor span {
   color: #969CB2;
 }
 .data-table tbody tr td.income {
-  color: #49aa26;
+  color: #47126b;
 }
 .data-table tbody tr td.expense {
   color: #E92929;
@@ -275,12 +278,26 @@ main .balance-card .valor span {
 .data-table tbody tr:hover {
   background-color: #E5E7EB;
 }
+.data-table tbody tr .remove {
+  color: red;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
 
 .modal form {
   max-width: 500px;
 }
 .modal form h2 {
   margin-bottom: 20px;
+}
+
+.nova-transacao {
+  color: green;
 }
 
 /*# sourceMappingURL=style.css.map */

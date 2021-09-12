@@ -3,6 +3,7 @@ header{
     background-color: $background;
     display: flex;
     justify-content: center;
+    position: relative;
     h1{
         margin-top: 30px;
         font-weight: 700;
@@ -22,8 +23,10 @@ main{
     .balance{
         display: flex;
         justify-content: space-between;
+        position: relative;
         @include media(){
             flex-direction: column;
+            margin-top: -120px;
         }
         &-card{
             padding: 25px 30px;
@@ -120,6 +123,16 @@ main{
         &:hover{
             background-color: #E5E7EB;
         }
+        .remove{
+            color: red;
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
     }
 }
 .modal{
@@ -129,4 +142,7 @@ main{
             margin-bottom: 20px;
         }
     }
+}
+.nova-transacao{
+    color: green;
 }
